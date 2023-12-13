@@ -1,0 +1,21 @@
+.container {
+    background-color: antiquewhite;
+}
+
+ul li {
+    font-size: 1.5em;
+    line-height: 2em;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    text-align: justify;
+}
+
+input{
+    border: 0;
+    padding: 2px;
+    background: #fff;
+    font: 12pt sans-serif;
+  }

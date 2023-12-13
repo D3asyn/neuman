@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Neumann János - Kettes Számrendszer</title>
+</head>
+
+<body>
+    <div class="fluid-container text-center bg-success text-white p-5">
+        <h1>Neumann János projektnap</h1>
+    </div>
+    <div class="container p-5">
+        <h1>Neumann János</h1>
+        <div class="row m-5">
+            <div class="col-sm-4">
+                <div class="kep">
+                    <img src="./neumann.jpg.webp" class="img-fluid img-thumbnail" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="szoveg">
+                    <p>
+                        1903. december 28-án született Budapesten, jómódú családból. Apja
+                        Neumann Miksa bankár, anyja Kann Margit. Két öccse született:
+                        Mihály (1907), chicagói orvos és Miklós (1911), philadelphiai
+                        jogász.
+                    </p>
+                    <p>
+                        1909 és 1913 között járt elemi iskolába. 1913-tól a fasori
+                        főgimnáziumban tanult tovább. Ez volt abban az időben Magyarország
+                        legjobb középiskolája. Kitűnő képzést kapott történelemből,
+                        jogtudományból és közgazdaságtanból. Az 1917/18-as tanévben
+                        elnyerte az V. osztály legjobb matematikusa címet. Mire
+                        leérettségizett, már jól képzett matematikusnak számított.
+                        Matematikai tehetségét Rátz László fedezte fel. Egyetemi évei
+                        alatt Kürschák József, Fekete Mihály és Szegő Gábor segítették
+                        matematikatudásának továbbfejlesztésében.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="szoveg">
+                    <p>
+                        Fiatal korától érdeklődött a repülés és a technika más újdonságai
+                        iránt is. Már ekkor gondolkodott kettes számrendszeren alapuló
+                        (bites) elektromos számítógép építésén. Mivel a matematika és a
+                        technika is érdekelte, párhuzamosan két egyetemet végzett. 1921.
+                        szeptember 14-én beiratkozott a budapesti tudományegyetem
+                        bölcsészkarára. Fő tárgya a matematika volt, melléktárgyai a
+                        fizika és a kémia. Doktori disszertációjának címe: Az általános
+                        halmazelmélet axiomatikus felépítése.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h1>Neumann Elvek</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="szoveg">
+                    <ul>
+                        <li>teljesen elektronikus számítógép</li>
+                        <li>kettes számrendszer alkalmazása</li>
+                        <li>aritmetikai egység alkalmazása (univerzális Turing-gép)</li>
+                        <li>központi vezérlőegység alkalmazása</li>
+                        <li>belső program- és adattárolás</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="kep">
+                    <img src="./elvek.jpg" class="w-100 img-fluid img-thumbnail" />
+                </div>
+            </div>
+        </div>
+        <h1>Átváltó Táblázat</h1>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="kep">
+                    <img src="./Ascii.png" class="w-100 img-fluid img-thumbnail" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <p>
+                    A mellékelt táblázat felhasználásával átalakíthatunk egy 8 elemű bináris számsort karakterré. A
+                    fordított irányt
+                    is használni fogjuk.
+                </p>
+                <p><ins>Például:</ins></p>
+                <p>00100001<sub>(2)</sub> = 33<sub>(10)</sub> = !</p>
+                <p>01100001<sub>(2)</sub> = 97<sub>(10)</sub> = a</p>
+                <p>00100001_01100001<sub>(2)</sub> = !a</p>
+                <p>011000010_0100001<sub>(2)</sub> = a!</p>
+                <p>A nem létező karakterek helyett használjunk emojikat.</p>
+                <p><ins>Például:</ins></p>
+                <p>00000000<sub>(2)</sub> = 0<sub>(10)</sub> = 🎅 </p>
+                <p>00000001<sub>(2)</sub> = 1<sub>(10)</sub> = 🎄 </p>
+            </div>
+        </div>
+        <h1>Szövegből ➡️ Bináris sor</h1>
+        <input id="ti1" value="TEST" />
+        <input id="ti2" size="50" />
+        <button onClick="convert();">Convert!</button>
+        <div class="row"></div>
+        <h1>Bináris sorból ➡️ Szöveg</h1>
+        <label for="lengthInput">Adja meg a szöveg hosszát (pozitív egész szám):</label>
+        <input type="number" id="lengthInput" min="1" step="1">
+        <button onclick="generateText()">Generálás</button>
+        <div id="binaryDiv"></div>
+        <h4>Text</h4>
+        <div id="textDiv"></div>
+        <div class="row"></div>
+    </div>
+    <script src="./neumann.js"></script>
+</body>
+
+</html>
